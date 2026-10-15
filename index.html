@@ -800,6 +800,12 @@ a.publication .mechanism-figure{max-width:680px!important;width:100%;margin:20px
 .publication .arrow,.work-links a span{
   font-family:Arial,'Helvetica Neue',sans-serif!important;
 }
+
+/* Mobile: let the CIPT publication link wrap as inline text, so its bullet stays before "Second author". */
+@media (max-width:850px){
+  #research .record li > a.inline-link{display:inline!important;vertical-align:baseline;}
+  #research .record li > a.inline-link::after{display:none!important;}
+}
 </style></head>
 <body>
 <header class="nav"><a class="logo" href="#top">YULE LI</a><button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="let e=document.getElementById('links');let o=e.classList.toggle('open');this.setAttribute('aria-expanded',o)">☰</button><nav class="nav-links" id="links"><a href="#education" data-label="Education">Education</a><a href="#experience" data-label="Professional Experience">Professional Experience</a><a href="#research" data-label="Research Project">Research Project</a><a href="#publications" data-label="Publication &amp; Patent">Publication &amp; Patent</a><a href="#leadership" data-label="Leadership">Leadership</a><a href="#skills" data-label="Skills">Skills</a></nav></header>
